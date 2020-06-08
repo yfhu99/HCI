@@ -126,7 +126,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            android:visibility="invisible"/>
+            android:visibility="invisible"
+            android:onClick="showTip"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,10 @@
 package com.tongji.hci;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -63,5 +65,24 @@ public class MainActivity extends AppCompatActivity {
         bundle.putBoolean("exists",true);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         navController.navigate(R.id.nav_task,bundle);
+    }
+
+    public void showTip(View view) {
+        AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+        dialog.setTitle("提示");
+        dialog.setMessage("确定要删除？");
+        dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        dialog.show();
     }
 }

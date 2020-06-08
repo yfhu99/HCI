@@ -28,6 +28,7 @@
             app:startIconDrawable="@drawable/ic_form_title">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="标题" />
@@ -44,6 +45,7 @@
             app:startIconDrawable="@drawable/ic_form_clock">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_start_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="起始日期" />
@@ -60,6 +62,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_end_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="结束日期" />
@@ -76,6 +79,7 @@
             app:startIconDrawable="@drawable/ic_form_desc">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="描述" />
@@ -83,6 +87,7 @@
 
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -109,6 +114,20 @@
                 android:layout_weight="1"
                 android:text="取消" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:text="删除"
+            android:textColor="?android:attr/textColorPrimaryInverse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:visibility="invisible"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,6 @@
 package com.tongji.hci;
 
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.Menu;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -58,5 +56,12 @@ public class MainActivity extends AppCompatActivity {
         navController.navigate(R.id.nav_profile);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+    }
+
+    public void modifyTask(View view) {
+        Bundle bundle=new Bundle();
+        bundle.putBoolean("exists",true);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        navController.navigate(R.id.nav_task,bundle);
     }
 }

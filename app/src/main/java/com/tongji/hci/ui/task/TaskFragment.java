@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -30,6 +31,19 @@ public class TaskFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
+        Bundle arguments = getArguments();
+        if(arguments!=null){
+            Button button = root.findViewById(R.id.delete_button);
+            button.setVisibility(View.VISIBLE);
+            TextView title=root.findViewById(R.id.form_title);
+            title.setText("人机交互项目");
+            TextView start=root.findViewById(R.id.form_start_date);
+            start.setText("2020-06-03");
+            TextView end=root.findViewById(R.id.form_end_date);
+            end.setText("2020-06-06");
+            TextView desc=root.findViewById(R.id.form_desc);
+            desc.setText("人机交互的课程项目");
+        }
         return root;
     }
 }

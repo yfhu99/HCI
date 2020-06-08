@@ -6,12 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
 
 import com.tongji.hci.R;
 
@@ -44,6 +46,15 @@ public class TaskFragment extends Fragment {
             TextView desc=root.findViewById(R.id.form_desc);
             desc.setText("人机交互的课程项目");
         }
+        Button button=root.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"添加成功",Toast.LENGTH_LONG).show();
+                Navigation.findNavController(v).navigate(R.id.nav_calendar);
+            }
+        });
         return root;
     }
 }
